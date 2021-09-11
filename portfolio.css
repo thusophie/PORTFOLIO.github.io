@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+	src:url("font/Angel rhapsody.ttf");
+	font-family:Angel rhapsody;
+	src:url("font/Nesans Semi Bold.ttf");
+	font-family:Nesans;
+	src:url("font/AcneDemo-Regular.ttf");
+	font-family:AcneDemo-Regular;
+	src:url("font/Calculator.ttf");
+	font-family:Calculator;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.body {
+	width: 100%;
+	height: 100%;
+}
+.section1 {
+	background-image:url("da6b9bbdd9ba9a21feb599f25b109898.gif");
+	background-repeat:no-repeat;
+	background-size:cover;
+	width: 100%;
+	height: 40px;
+	padding: 3%;
+	position: fixed;
+	cursor: none;
+	z-idex: 2;
+}
+.section1 list{
+	padding-right: 40px;
+	position:relative;
+	display: inline;
+}
+.list {
+	float: right;
+	padding-right: 2%;
+}
+.section1 .list a{
+	padding-right:50px;
+	font-family: FogtwoNo5;
+	font-size: 40px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.hover {
+	transition: all 0.3s ease;
+}
+.cursor {
+      pointer-events: none;
+      position: fixed;
+      padding: 0.3rem;
+      background-color: #fff;
+      border-radius: 50%;
+      mix-blend-mode: difference;
+      transition: transform 0.3s ease;
+}
+.list:hover ~ .cursor {
+      transform: translate(-50%, -50%) scale(10);
+}
+@media(min-width: 900px) {
+      .list {
+            display: flex;
+            justify-content:flex-end;
+      }
+}
+
+@media(max-width: 900px) {
+      .section1 {
+            top: 30%;
+      }
+      .hover {
+            width: 100%;
+            padding: 20px 0;
+            display: inline-block;
+      }
+}
+.logo {
+	position:absolute;
+	font-family: Angel rhapsody;
+	font-size: 60px;
+	color: #FFFFFF;
+}
+
+.section2{
+	margin-left: 0;
+	background-color: #000000;
+	background-size:cover;
+	
+	display:flex;
+}
+.section2 .right {
+	position: relative;
+	padding-left: 80px;
+}
+.section2 .right h1{
+	color:#FFFFFF;
+	padding-top: 290px;
+	font-family: AcneDemo-Regular;
+	font-size:120px;
+	list-style: none;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: 0.5s;
+}
+.section2 .right h1:hover{
+	color: #000000;
+	text-shadow: 2px 2px 5px #FFFFFF;
+	
+}
+.section2 .right h1::before
+{
+	content:attr(data-text);
+	font-size:100px;
+	color: #000000;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-shadow: 1px 1px 1px #FFFFFF;
+	font-weight: 500;
+	letter-spacing: 10px;
+	white-space: nowrap;
+	text-align: center;
+	opacity: 0;
+	transition: 0.9s;
+}
+.section2 .right h1:hover::before
+{
+	opacity: 1;
+	letter-spacing: 6px;
+}
+.section3 {
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #000000;
+	height:500px;
+	width: 100%;
+	color: #FFFFFF;
+}
+.section3 .title1 {
+	font-family: AcneDemo-Regular;
+	font-size: 100px;
+	letter-spacing: 10px;
+	padding-left: 30px;
+}
+.section3 .aboutme {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+	padding-left: 10%;
+	padding-top: 60px;
+}
+.section3 hr {
+	width: 500px;
+	height: 5px;
+	border: none;
+	background-image: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+	margin: 0px 0px 30px 0;
+	transition: width 0.5s, height 0.5s;
+	margin-bottom: 40px;
+}
+.section3 hr:hover {
+	-webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 21px 40px 50px -29px rgba(0,0,0,0); 
+box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 21px 40px 50px -29px rgba(0,0,0,0);
+	
+}
+.section3 .aboutme .fas {
+	font-size: 35px;
+	color: #FFFFFF;
+	padding: 10px;
+} 
+.aboutme .inf{
+	background-image: url("23e56fe58ed4ed15eaafe0e7e6f312ac.jpeg");
+	background-size:cover;
+	width: 500px;
+	color: #FFFFFF;
+	border-radius: 10px;
+-webkit-box-shadow: 5px 5px 5px 0px #FFFFFF, inset 4px 4px 4px 0px #FFFFFF, 1px 1px 12px 10px #595757; 
+box-shadow: 5px 5px 5px 0px #FFFFFF, inset 4px 4px 4px 0px #FFFFFF, 1px 10px 12px 1px #595757;
+}
+.aboutme .inf {
+	padding-left: 20px;
+	font-family:Calculator;
+	font-size: 35px;
+}
+.aboutme .inf ul li {
+	display: block;
+}
+.aboutme .inf2 {
+	background-image: url("23e56fe58ed4ed15eaafe0e7e6f312ac.jpeg");
+	background-size:cover;
+	width: 500px;
+	color: #FFFFFF;
+	border-radius: 10px;
+	-webkit-box-shadow: 5px 5px 5px 0px #FFFFFF, inset 4px 4px 4px 0px #FFFFFF, 1px 1px 12px 10px #595757; 
+box-shadow: 5px 5px 5px 0px #FFFFFF, inset 4px 4px 4px 0px #FFFFFF, 1px 10px 12px 1px #595757;
+
+}
+
+.aboutme .inf2 {
+	padding-left: 20px;
+	font-family:Calculator;
+	font-size: 35px;
+}
+.aboutme .inf2 ul li {
+	display: block;
+}
+.section4{
+	background-color: #000000;
+	height: 900px;
+	width: 100%;
+	display:flex;
+	padding-top: 90px;
+	padding-left: 200px;
+	
+}
+.section4 .title2 h1{
+	color: #FFFFFF;
+	padding-top: 200px;
+	font-family: AcneDemo-Regular;
+	font-size: 100px;
+	letter-spacing: 10px;
+}
+
+
+

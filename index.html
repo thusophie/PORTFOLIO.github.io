@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Untitled Document</title>
+	<link href="portfolio.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="body">
+	<div class="section1">
+		<h3 class="logo">1 9 9 5</h3>
+		<div class="list">
+				<a href="#" class="hover">HOME</a>
+				<a href="#" class="hover">ABOUT ME</a>
+				<a href="#" class="hover">PORTFOLIO</a>
+				<a href="#" class="hover">SKILLS</a>
+				<a href="#" class="hover">CONTATCS</a>
+		</div>
+			<div class="cursor"></div>
+	</div>
+	<div class="section2">
+		<div class="left">
+			<img src="tumblr_nk0g5nD5N51tevaano1_500.gif" style=" width:800px" >
+		</div>
+		<div class="right">
+			<h1 class="me" data-text="I AM A FREELANCER">I AM SOPHIE</h1>
+		</div>
+	</div>
+	
+	<div class="section3">
+		<h1 data-aos="fade-up" data-aos-duration="2000"class="title1"> ABOUT ME</h1>
+		<hr>
+		<div data-aos="fade-up" data-aos-duration="2000"
+     data-aos-anchor-placement="top-bottom" class="aboutme">
+			<div class="inf">                                          
+				<ul>
+					<li><i class="fas fa-user-graduate"></i> Nguyen Hong Thu</li>
+					<li><i class="fas fa-birthday-cake"></i> 13 Semtember 1995</li>
+					<li><i class="fas fa-phone-alt"></i> 078 357 3979</li>
+					<li><i class="fas fa-house-user"></i> Binh Duong</li>
+				</ul>
+			</div>
+			<div class="inf2">
+				<ul>
+					<li><i class="fas fa-briefcase"></i> Freelancer</li>
+					<li><i class="fas fa-envelope-square"></i> nguyenhongthu13995@gmail.com</li>
+					<li><i class="fas fa-graduation-cap"></i> SAIGON ACT</li>
+					<li><i class="fas fa-book-open"></i> Arena Multimedia</li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	<div class="section4">
+		<div data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine" class="traidat">
+			<img src="0deec720000b2066289b9f2a989b5194.gif" style="width: 500px">
+		</div>
+		<div class="title2">
+			<h1 data-aos="fade-up" data-aos-duration="2000"class="title1">PORTFOLIO</h1>
+			<hr>
+		</div>
+	</div>
+		
+	<div class="section5"></div>
+	
+	<div class="section6"></div>
+	
+	<div class="section7"></div>
+	
+	<div class="section8"></div>
+	
+	<div class="section9"></div>
+	
+	<div class="section10"></div>
+	
+</div>
+	<script>
+
+(function () {
+
+      const link = document.querySelectorAll('nav > .hover');
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+
+            move = 25,
+            xMove = x / width * (move * 2) - move,
+            yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+      };
+
+      link.forEach(b => b.addEventListener('mousemove', animateit));
+      link.forEach(b => b.addEventListener('mouseleave', animateit));
+      window.addEventListener('mousemove', editCursor);
+
+})();
+
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>
+  AOS.init();
+</script>
+<script>
+  AOS.init();
+</script></body>
+</html>
